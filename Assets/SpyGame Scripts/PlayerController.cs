@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour
         snow = GameObject.Find("Snow");
         rain = GameObject.Find("Rain");
         weatherText.text = "" + WeatherGrab.GetConditions(WeatherGrab.GetZip());
+        cityText.text = "" + WeatherGrab.GetCity(WeatherGrab.GetZip());
         try
         {
             if (weatherText.text.Contains("Clear"))
@@ -92,12 +93,9 @@ public class PlayerController : MonoBehaviour
         catch (Exception e)
         {
             Debug.Log(e.Message);
-            cityText.text = e.Message;
+           // cityText.text = e.Message;
             return;
-        }
-        cityText.text = "" + WeatherGrab.GetCity(WeatherGrab.GetZip());
-          
-
+        }         
     }
 
     // Update is called once per frame
