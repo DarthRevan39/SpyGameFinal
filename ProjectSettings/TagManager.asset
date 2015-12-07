@@ -21,6 +21,7 @@ TagManager:
   - Exit
   - Cloud
   - Tree
+  - Weather
   layers:
   - Default
   - TransparentFX

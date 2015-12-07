@@ -20,6 +20,10 @@ public class PlayerController : MonoBehaviour
     private bool isShooting;
     private Animator player;
     public Text weatherText;
+    public Text cityText;
+    private GameObject[] clouds;
+    public GameObject snow;
+    public GameObject rain;
 
     private Transform m_GroundCheck;
 
@@ -39,7 +43,40 @@ public class PlayerController : MonoBehaviour
         playerPhysics = GetComponent<PlayerPhysics>();
         m_GroundCheck = transform.FindChild("GroundCheck");
         updateCounter = 0;
+
+        //Weather
+        clouds = GameObject.FindGameObjectsWithTag("Cloud");
+        snow = GameObject.Find("Snow");
+        rain = GameObject.Find("Rain");
         weatherText.text = "" + WeatherGrab.GetConditions(WeatherGrab.GetZip());
+        weatherText.text = "Snow";
+        if (weatherText.text.Contains("Clear"))
+        {
+            for (int i = 0; i < clouds.Length; i++)
+            {
+               // clouds[i].SetActive(false);
+            }
+            snow.SetActive(false);
+            rain.SetActive(false);
+        }
+        else if (weatherText.text.Contains("Snow") || weatherText.text.Contains("Sleet") || weatherText.text.Contains("Ice"))
+        {
+            snow.SetActive(true);
+            rain.SetActive(false);
+        }
+        else if (weatherText.text.Contains("Rain"))
+        {
+            snow.SetActive(false);
+            rain.SetActive(true);
+        }
+        else
+        {
+            snow.SetActive(false);
+            rain.SetActive(false);
+        }
+
+        cityText.text = "" + WeatherGrab.GetCity(WeatherGrab.GetZip());
+          
 
     }
 

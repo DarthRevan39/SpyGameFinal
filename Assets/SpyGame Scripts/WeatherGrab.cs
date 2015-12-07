@@ -112,6 +112,54 @@ namespace WReader
                 return " ";
             }
         }
+
+        public static string GetCity(string zipCode)
+        {
+            string URLString = "http://www.wunderground.com/weather-forecast/" + zipCode;
+            int count = 0;
+            try
+            {
+                WebClient client = new WebClient();
+                using (var stream = client.OpenRead(URLString))
+                using (var reader = new StreamReader(stream))
+                {
+                    string line;
+                    while ((line = reader.ReadLine().Trim()) != null)
+                    {
+                        if (line.Length > 25)
+                        {
+                            string key = line.Substring(0, 25);
+                            //Console.WriteLine(key);
+                            if (key.Equals("<meta property=\"og:title\""))
+                            {
+                                line = line.Substring(34);
+                                int pipeCount = 0;
+                                int pipe1Index = 0;
+                                for (int i = 0; i < line.Length; i++)
+                                {
+                                    char c = line.ToCharArray()[i];
+                                    if (c == '|')
+                                    {
+                                        pipeCount++;
+                                        if (pipeCount == 1) pipe1Index = i - 1;
+                                    }
+                                }
+                                line = line.Substring(1, pipe1Index);
+                                line = line.Trim();
+                                return line;
+                            }
+                        }
+                        count++;
+                    }
+                    //Console.ReadKey();
+                    return " ";
+                }
+            }
+            catch
+            {
+                return " ";
+            }
+        }
     }
 }
 
