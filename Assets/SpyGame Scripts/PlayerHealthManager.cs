@@ -8,6 +8,7 @@ public class PlayerHealthManager : MonoBehaviour {
     [HideInInspector]
     public bool isDead = false;
     public int lives = 5;
+    public GameObject spy = GameObject.Find("Spy");
 
 
     // Use this for initialization
@@ -25,7 +26,8 @@ public class PlayerHealthManager : MonoBehaviour {
         {
             GetComponent<PlayerController>().setHealthText();
             isDead = true;
-            DestroyObject(GameObject.Find("Spy"));
+            spy.SetActive(false);
+            //DestroyObject(GameObject.Find("Spy"));
         }
 	}
 

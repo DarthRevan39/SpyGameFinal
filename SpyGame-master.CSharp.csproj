@@ -51,17 +51,11 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Analytics">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
@@ -152,18 +146,19 @@
     <Compile Include="Assets\AstarPathfindingProject\Utilities\ProfileHelper.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
     <Compile Include="Assets\AstarPathfindingProject\changelog.cs" />
-    <Compile Include="Assets\MainMenu\Scripts\GUIScript.cs" />
-    <Compile Include="Assets\MainMenu\Scripts\LevelSelectMenu.cs" />
-    <Compile Include="Assets\MainMenu\Scripts\MainMenu.cs" />
-    <Compile Include="Assets\MainMenu\Scripts\OptionsMenu.cs" />
-    <Compile Include="Assets\MainMenu\Scripts\SoundSettings.cs" />
-    <Compile Include="Assets\MainMenu\Scripts\WeatherSelect.cs" />
-    <Compile Include="Assets\MainMenu\Scripts\ZipSave.cs" />
     <Compile Include="Assets\SpyGame Scripts\CameraFollowX.cs" />
     <Compile Include="Assets\SpyGame Scripts\DeathMenu.cs" />
     <Compile Include="Assets\SpyGame Scripts\DestroyObjectOverTime.cs" />
     <Compile Include="Assets\SpyGame Scripts\EnemyHealthManager.cs" />
+    <Compile Include="Assets\SpyGame Scripts\ExitScript.cs" />
     <Compile Include="Assets\SpyGame Scripts\FatEnemyBehavior.cs" />
+    <Compile Include="Assets\SpyGame Scripts\MainMenu\Scripts\GUIScript.cs" />
+    <Compile Include="Assets\SpyGame Scripts\MainMenu\Scripts\LevelSelectMenu.cs" />
+    <Compile Include="Assets\SpyGame Scripts\MainMenu\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\SpyGame Scripts\MainMenu\Scripts\OptionsMenu.cs" />
+    <Compile Include="Assets\SpyGame Scripts\MainMenu\Scripts\SoundSettings.cs" />
+    <Compile Include="Assets\SpyGame Scripts\MainMenu\Scripts\WeatherSelect.cs" />
+    <Compile Include="Assets\SpyGame Scripts\MainMenu\Scripts\ZipSave.cs" />
     <Compile Include="Assets\SpyGame Scripts\PauseMenu.cs" />
     <Compile Include="Assets\SpyGame Scripts\PickUpManager.cs" />
     <Compile Include="Assets\SpyGame Scripts\PlayAudio.cs" />

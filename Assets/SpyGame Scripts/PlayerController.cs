@@ -2,10 +2,11 @@
 using System.Collections;
 using UnityEngine.UI;
 using WReader;
+using System;
 
 [RequireComponent(typeof(PlayerPhysics))]
 public class PlayerController : MonoBehaviour
-{ 
+{
     //Player handling
     public float speed = 10;
     public float acceleration = 100;
@@ -49,32 +50,51 @@ public class PlayerController : MonoBehaviour
         snow = GameObject.Find("Snow");
         rain = GameObject.Find("Rain");
         weatherText.text = "" + WeatherGrab.GetConditions(WeatherGrab.GetZip());
-        weatherText.text = "Snow";
-        if (weatherText.text.Contains("Clear"))
+        try
         {
-            for (int i = 0; i < clouds.Length; i++)
+            if (weatherText.text.Contains("Clear"))
             {
-               // clouds[i].SetActive(false);
-            }
-            snow.SetActive(false);
-            rain.SetActive(false);
-        }
-        else if (weatherText.text.Contains("Snow") || weatherText.text.Contains("Sleet") || weatherText.text.Contains("Ice"))
-        {
-            snow.SetActive(true);
-            rain.SetActive(false);
-        }
-        else if (weatherText.text.Contains("Rain"))
-        {
-            snow.SetActive(false);
-            rain.SetActive(true);
-        }
-        else
-        {
-            snow.SetActive(false);
-            rain.SetActive(false);
-        }
+                for (int i = 0; i < clouds.Length; i++)
+                {
+                    clouds[i].SetActive(false);
+                }
+                if (snow != null)
+                    snow.SetActive(false);
+                if (rain != null)
+                    rain.SetActive(false);
 
+            }
+            else if (weatherText.text.Contains("Snow") || weatherText.text.Contains("Sleet") || weatherText.text.Contains("Ice"))
+            {
+                if (snow != null)
+                snow.SetActive(true);
+
+                if (rain != null)
+                rain.SetActive(false);
+            }
+            else if (weatherText.text.Contains("Rain") || weatherText.text.Contains("storm"))
+            {
+                if (snow != null)
+                snow.SetActive(false);
+
+                if (rain != null)
+                rain.SetActive(true);
+            }
+            else
+            {
+                if (snow != null)
+                snow.SetActive(false);
+
+                if (rain != null)
+                rain.SetActive(false);
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.Log(e.Message);
+            cityText.text = e.Message;
+            return;
+        }
         cityText.text = "" + WeatherGrab.GetCity(WeatherGrab.GetZip());
           
 
