@@ -21,7 +21,7 @@ public class SkinnyEnemyBehavior : MonoBehaviour
     {
         skinnyEnemy = GetComponent<Animator>();
         Spy = GameObject.Find("Spy");
-        updateTime = 120;
+        updateTime = GetNumber();
     }
 
     // Update is called once per frame
@@ -60,5 +60,9 @@ public class SkinnyEnemyBehavior : MonoBehaviour
             }
         }
         isShooting = false;
+    }
+    public int GetNumber()
+    {
+        return (int) ((Random.value + 1) * 100);
     }
 }

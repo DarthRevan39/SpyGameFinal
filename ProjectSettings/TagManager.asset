@@ -18,6 +18,9 @@ TagManager:
   - Potato
   - Bullet
   - Buildings
+  - Exit
+  - Cloud
+  - Tree
   layers:
   - Default
   - TransparentFX

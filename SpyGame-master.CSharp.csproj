@@ -150,13 +150,15 @@
     <Compile Include="Assets\MainMenu\Scripts\LevelSelectMenu.cs" />
     <Compile Include="Assets\MainMenu\Scripts\MainMenu.cs" />
     <Compile Include="Assets\MainMenu\Scripts\OptionsMenu.cs" />
-    <Compile Include="Assets\MainMenu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\MainMenu\Scripts\SoundSettings.cs" />
     <Compile Include="Assets\MainMenu\Scripts\WeatherSelect.cs" />
+    <Compile Include="Assets\MainMenu\Scripts\ZipSave.cs" />
     <Compile Include="Assets\SpyGame Scripts\CameraFollowX.cs" />
+    <Compile Include="Assets\SpyGame Scripts\DeathMenu.cs" />
     <Compile Include="Assets\SpyGame Scripts\DestroyObjectOverTime.cs" />
     <Compile Include="Assets\SpyGame Scripts\EnemyHealthManager.cs" />
     <Compile Include="Assets\SpyGame Scripts\FatEnemyBehavior.cs" />
+    <Compile Include="Assets\SpyGame Scripts\PauseMenu.cs" />
     <Compile Include="Assets\SpyGame Scripts\PickUpManager.cs" />
     <Compile Include="Assets\SpyGame Scripts\PlayAudio.cs" />
     <Compile Include="Assets\SpyGame Scripts\PlayerAmmoController.cs" />

@@ -40,6 +40,13 @@ namespace WReader
 {
     public class WeatherGrab : MonoBehaviour
     {
+        public static string GetZip()
+        {
+            GameObject zipObject;
+            zipObject = GameObject.Find("ZipString");
+            return zipObject.GetComponent<ZipSave>().zipCode;
+
+        }
         static void GetWeather()
         {
 
@@ -97,12 +104,12 @@ namespace WReader
                         count++;
                     }
                     //Console.ReadKey();
-                    return "NA";
+                    return " ";
                 }
             }
             catch
             {
-                return "NA";
+                return " ";
             }
         }
     }

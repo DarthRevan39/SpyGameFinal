@@ -32,7 +32,7 @@ public class SoundSettings : MonoBehaviour {
             Application.LoadLevel(2);
         }
 
-        if (GUI.Button(new Rect(Screen.width * .1f, Screen.height * 0.8f, Screen.width * .5f, Screen.height * .1f), "Return to Options"))
+        if (GUI.Button(new Rect(Screen.width * .1f, Screen.height * 0.85f, Screen.width * .5f, Screen.height * .1f), "Return to Options"))
         {
             Application.LoadLevel(2);
         }

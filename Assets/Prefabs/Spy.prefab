@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &143510
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,7 +31,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &159928
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,7 +87,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &414994
 Transform:
   m_ObjectHideFlags: 1
@@ -257,7 +257,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159928}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -509,7 +509,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 159928}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef56f91833084c34ca3c824a0f74bc8a, type: 3}
+  m_Script: {fileID: 11500000, guid: e376813ae0828734eb0a235202a8b46c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
@@ -522,6 +522,7 @@ MonoBehaviour:
   scoreText: {fileID: 0}
   healthText: {fileID: 0}
   muricaBullet: {fileID: 171154, guid: 0177520eb75d97f4799657799013f488, type: 2}
+  weatherText: {fileID: 0}
   myHealthManager: {fileID: 0}
 --- !u!114 &11479524
 MonoBehaviour:
@@ -529,7 +530,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159928}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b4dd51adfb7e9540abf91109964816b, type: 3}
   m_Name: 

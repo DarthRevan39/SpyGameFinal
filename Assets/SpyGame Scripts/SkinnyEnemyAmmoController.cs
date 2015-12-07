@@ -32,6 +32,11 @@ public class SkinnyEnemyAmmoController : MonoBehaviour {
             collision.GetComponent<PlayerHealthManager>().removeHealthPoint(damageToGive);
             Destroy(gameObject);
         }
+
+        if (collision.tag == "ground")
+        {
+            Destroy(gameObject);
+        }
     }
 
 	

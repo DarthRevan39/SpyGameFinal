@@ -7,7 +7,13 @@ public class WeatherSelect : MonoBehaviour {
     public GUIStyle input;
     public Texture backgroundTexture;
     public string titleText;
-    private string zipCode = "ZIP";
+    public string zipCode = "ZIP";
+    GameObject zipObject;
+
+    void Start()
+    {
+       zipObject = GameObject.Find("ZipString");
+    }
 
     void OnGUI()
     {
@@ -19,6 +25,8 @@ public class WeatherSelect : MonoBehaviour {
         //displays buttons and text field
         GUI.Box(new Rect(Screen.width * .1f, Screen.height * .4f, Screen.width * .5f, Screen.height * .1f), "Enter Zip Code for in Game Weather", input);
         zipCode = GUI.TextField(new Rect(Screen.width * .1f, Screen.height * .5f, Screen.width * .5f, Screen.height * .1f), zipCode, 5, input);
+        if (zipCode != null)
+        zipObject.GetComponent<ZipSave>().zipCode = zipCode;
         if (GUI.Button(new Rect(Screen.width * .1f, Screen.height * .6f, Screen.width * .5f, Screen.height * .1f), "Return to Options"))
         {
             Application.LoadLevel(2);

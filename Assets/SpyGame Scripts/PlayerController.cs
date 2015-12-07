@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private int scoreColorCounter;
     private bool isShooting;
     private Animator player;
+    public Text weatherText;
 
     private Transform m_GroundCheck;
 
@@ -38,6 +39,8 @@ public class PlayerController : MonoBehaviour
         playerPhysics = GetComponent<PlayerPhysics>();
         m_GroundCheck = transform.FindChild("GroundCheck");
         updateCounter = 0;
+        weatherText.text = "" + WeatherGrab.GetConditions(WeatherGrab.GetZip());
+
     }
 
     // Update is called once per frame
