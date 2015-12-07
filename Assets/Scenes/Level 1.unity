@@ -7622,7 +7622,7 @@ GameObject:
   - 114: {fileID: 716213661}
   - 114: {fileID: 716213660}
   m_Layer: 5
-  m_Name: Main Menu Button
+  m_Name: Next Level Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7688,7 +7688,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1866938011}
-        m_MethodName: mainMenu
+        m_MethodName: goToNextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15325,7 +15325,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1392424642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15951,7 +15951,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1469684763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17315,11 +17315,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 428788, guid: 7b536f21156002a43af76a8c65fca0a2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -19.9400005
+      value: -30.8400002
       objectReference: {fileID: 0}
     - target: {fileID: 428788, guid: 7b536f21156002a43af76a8c65fca0a2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.03999996
+      value: 2.1099999
       objectReference: {fileID: 0}
     - target: {fileID: 428788, guid: 7b536f21156002a43af76a8c65fca0a2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -17437,7 +17437,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 187376, guid: 5d3374506e5d20843b1e837a455dfcf6, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11446258, guid: 5d3374506e5d20843b1e837a455dfcf6, type: 2}
@@ -18672,7 +18672,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 88afafb9c60cde244b6b686be9e9c560, type: 3}
-    m_FontSize: 14
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -18682,7 +18682,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Restart
+  m_Text: 'Restart Level
 
 '
 --- !u!222 &1763725328
@@ -19576,9 +19576,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1866938009}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: f724b2cc007025544a6c037fbd3ca6ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spy: {fileID: 1109420413}
+  levelCompleteMenuCanvas: {fileID: 1094041464}
+  levelSelect: 6
+  currentLevel: 5
 --- !u!4 &1873246124 stripped
 Transform:
   m_PrefabParentObject: {fileID: 411354, guid: 10fb565ffb85ce34f83698e0840d1fed, type: 2}

@@ -4,10 +4,12 @@ using System.Collections;
 public class ExitScript : MonoBehaviour {
 
     public int levelSelect;
+    public bool levelComplete;
 
 	// Use this for initialization
 	void Start () {
-	
+
+        levelComplete = false;
 	}
 	
 	// Update is called once per frame
@@ -19,7 +21,7 @@ public class ExitScript : MonoBehaviour {
     {
         if (collision.tag == "Player")
         {
-            Application.LoadLevel(levelSelect);
+            levelComplete = true;
         }
     }
 }
